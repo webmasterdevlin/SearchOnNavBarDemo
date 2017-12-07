@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchOnNavBarDemo.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <BoxView BackgroundColor="#FF4081" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <SearchBar Grid.Row="0"  CancelButtonColor="#FFFFFF" PlaceholderColor="#FFFFFF"  Placeholder="search" TextChanged="SearchBar_OnTextChanged" VerticalOptions="Center" />
+        <!--<Entry Grid.Row="0" PlaceholderColor="White"  Placeholder="search" TextChanged="SearchBar_OnTextChanged" VerticalOptions="Center" />-->
+        <ListView x:Name="MyListView"
+                  Grid.Row="1"
+                  Margin="10"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="ListView_OnRefreshing"
+                  HasUnevenRows="True"
+                  ItemTapped="ListView_OnItemTapped"
+                  ItemSelected="ListView_OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding Image}" />
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Name}"
+                                       FontAttributes="Bold" />
+                                <Label Text="{Binding Detail}"
+                                       TextColor="Gray" />
+                            </StackLayout>
+                            <Label Text="Follow"
+                                   TextColor="Blue"
+                                   VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="2" Text="Next" Clicked="Button_OnClicked" HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>
