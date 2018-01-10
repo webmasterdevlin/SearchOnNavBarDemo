@@ -27,15 +27,15 @@ namespace SearchOnNavBarDemo
         {
             List<Person> contacts = new List<Person>
             {
-                new Person{Name = "Archie", Detail = "Online", Image = "http://lorempixel.com/100/100/people/2"},
-                new Person{Name = "Devlin", Detail = "Online", Image = "http://lorempixel.com/100/100/people/3"},
-                new Person{Name = "Ruby", Detail = "Offline", Image = "http://lorempixel.com/100/100/people/1"},
-                new Person{Name = "Jena", Detail = "Online", Image = "http://lorempixel.com/100/100/people/4"},
-                new Person{Name = "Fin", Detail = "Offline", Image = "http://lorempixel.com/100/100/people/6"},
-                new Person{Name = "Gukachata", Detail = "Offline", Image = "http://lorempixel.com/100/100/people/8"},
-                new Person{Name = "Falum", Detail = "Online", Image = "http://lorempixel.com/100/100/people/7"},
-                new Person{Name = "Christina", Detail = "Offline", Image = "http://lorempixel.com/100/100/people/9"},
-                new Person{Name = "Leo", Detail = "Online", Image = "http://lorempixel.com/100/100/people/5"},
+                new Person{Name = "Archie", Detail = "Online", Image = "https://placeimg.com/100/100/people/2"},
+                new Person{Name = "Devlin", Detail = "Online", Image = "https://placeimg.com/100/100/people/3"},
+                new Person{Name = "Ruby", Detail = "Offline", Image = "https://placeimg.com/100/100/people/1"},
+                new Person{Name = "Jena", Detail = "Online", Image = "https://placeimg.com/100/100/people/4"},
+                new Person{Name = "Fin", Detail = "Offline", Image = "https://placeimg.com/100/100/people/6"},
+                new Person{Name = "Gukachata", Detail = "Offline", Image = "https://placeimg.com/100/100/people/8"},
+                new Person{Name = "Falum", Detail = "Online", Image = "https://placeimg.com/100/100/people/7"},
+                new Person{Name = "Christina", Detail = "Offline", Image = "https://placeimg.com/100/100/people/9"},
+                new Person{Name = "Leo", Detail = "Online", Image = "https://placeimg.com/100/100/people/5"},
             };
             
             return string.IsNullOrEmpty(searchText) ? contacts : contacts
